@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="userMySqlMapper" class="com.sysy.project.mapper.impl.UserMapperMySqlImpl"/>
+    <bean id="userOracleMapper" class="com.sysy.project.mapper.impl.UserMapperOracleImpl"/>
+    <bean id="vipMapper" class="com.sysy.project.mapper.impl.VipMapperImpl"/>
+    <bean id="customerService" class="com.sysy.project.service.impl.CustomerServiceImpl">
+        <!--指定构造方法的参数下标 第n个参数-->
+        <constructor-arg index="0" ref="userOracleMapper"/>
+        <constructor-arg index="1" ref="vipMapper"/>
+    </bean>
+
+    <bean id="customerService2" class="com.sysy.project.service.impl.CustomerServiceImpl">
+        <!--指定构造方法的参数名字 -->
+        <constructor-arg name="userMapper" ref="userOracleMapper"/>
+        <constructor-arg name="vipMapper" ref="vipMapper"/>
+    </bean>
+
+    <bean id="customerService3" class="com.sysy.project.service.impl.CustomerServiceImpl">
+        <!--不指定自动识别 -->
+        <constructor-arg ref="userOracleMapper"/>
+        <constructor-arg ref="vipMapper"/>
+    </bean>
+
+    <bean id="userController" class="com.sysy.project.controller.UserController">
+        <constructor-arg index="0" ref="customerService"/>
+    </bean>
+
+</beans>
