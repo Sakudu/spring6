@@ -1,0 +1,2 @@
+最初使用MySQL数据库，如果后续需要变更为Oracle数据库，则需要实现新的UserMapperOracleImpl，并重新测试所有接口，违背了OCP原则 
+并且当前代码是上依赖下的 即UserController依赖具体的UserService；UserService依赖了具体的UserMapper 违背了依赖倒置原则

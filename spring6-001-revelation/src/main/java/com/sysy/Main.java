@@ -1,11 +1,15 @@
 package com.sysy;
 
+import com.sysy.project.controller.UserController;
+
 /**
  * @author saku
  * @date ${DATE} ${TIME}
  */
 public class Main {
+
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        UserController userController = new UserController();
+        userController.delete();
     }
 }
