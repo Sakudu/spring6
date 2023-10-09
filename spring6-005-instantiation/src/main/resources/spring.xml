@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="userBean" class="com.sysy.constructor.User"/>
+
+    <!--需要表明调用哪个类的哪个方法获取bean  factory-method指定的是工厂类中的静态方法-->
+    <bean id="starBean" class="com.sysy.simpleFactory.StarFactory" factory-method="get"/>
+
+    <bean id="gunFactory" class="com.sysy.methodFactory.GunFactory"/>
+    <!--告诉Spring调用哪个对象的哪个方法获取bean-->
+    <bean id="gun" factory-bean="gunFactory" factory-method="get"/>
+
+    <bean id="person" class="com.sysy.factoryBean.PersonFactoryBean"/>
+
+    <!--通过工厂bean返回普通bean Date-->
+    <bean id="dateBean" class="com.sysy.customDate.DateFactoryBean">
+        <constructor-arg name="date" value="2023-10-09"/>
+    </bean>
+
+    <bean id="man" class="com.sysy.customDate.Man">
+        <property name="birth" ref="dateBean"/>
+    </bean>
+</beans>

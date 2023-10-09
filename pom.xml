@@ -16,6 +16,7 @@
         <module>simple-factory</module>
         <module>method-factory</module>
         <module>abstract-factory</module>
+        <module>spring6-005-instantiation</module>
     </modules>
 
     <properties>
