@@ -12,11 +12,17 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class TestScope {
 
     @Test
-    public void TestBeanScope(){
+    public void TestBeanScope() {
         ApplicationContext ac = new ClassPathXmlApplicationContext("spring-scope.xml");
         SpringBean acBean = ac.getBean("springBean", SpringBean.class);
         SpringBean acBean2 = ac.getBean("springBean", SpringBean.class);
         System.out.println(acBean);
         System.out.println(acBean2);
+        new Thread(() -> {
+            SpringBean acBean1 = ac.getBean("springBean", SpringBean.class);
+            SpringBean acBean3 = ac.getBean("springBean", SpringBean.class);
+            System.out.println(acBean1);
+            System.out.println(acBean3);
+        }).start();
     }
 }
