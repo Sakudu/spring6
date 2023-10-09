@@ -17,6 +17,7 @@
         <module>method-factory</module>
         <module>abstract-factory</module>
         <module>spring6-005-instantiation</module>
+        <module>spring6-006-beanLifeCycle</module>
     </modules>
 
     <properties>
