@@ -14,6 +14,8 @@
         <module>spring6-003-di</module>
         <module>spring6-004-scope</module>
         <module>simple-factory</module>
+        <module>method-factory</module>
+        <module>abstract-factory</module>
     </modules>
 
     <properties>
