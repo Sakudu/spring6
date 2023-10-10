@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+
+    <bean id="user" class="com.sysy.bean.User">
+        <property name="name" value="张三"/>
+        <property name="age" value="18"/>
+    </bean>
+
+    <bean id="userServiceImpl" class="com.sysy.service.impl.UserServiceImpl">
+        <property name="userMapper" ref="userMapperImpl"/>
+    </bean>
+    <bean id="userMapperImpl" class="com.sysy.mapper.impl.UserMapperImpl"/>
+</beans>
