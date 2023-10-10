@@ -18,6 +18,7 @@
         <module>abstract-factory</module>
         <module>spring6-005-instantiation</module>
         <module>spring6-006-beanLifeCycle</module>
+        <module>spring6-007-circularDependency</module>
     </modules>
 
     <properties>
