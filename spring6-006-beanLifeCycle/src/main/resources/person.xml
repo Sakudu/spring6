@@ -3,7 +3,7 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="person" class="com.sysy.lifeCycle.Person" init-method="initBean" destroy-method="destroyBean">
+    <bean id="person" class="com.sysy.lifeCycle.Person" init-method="initBean" destroy-method="destroyBean" scope="prototype">
         <property name="name" value="李四"/>
     </bean>
 
