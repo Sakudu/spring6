@@ -12,6 +12,6 @@ public class UserMapperImpl implements UserMapper {
 
     @Override
     public void insert() {
-        System.out.println("向mysql数据库插入User数据");
+        System.out.println("向mysql数据库插入User数据1");
     }
 }
