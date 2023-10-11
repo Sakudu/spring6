@@ -21,12 +21,14 @@
         <module>spring6-007-circularDependency</module>
         <module>spring6-008-reflect</module>
         <module>spring6-009-mySpring</module>
+        <module>spring6-010-annotation</module>
     </modules>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <jakarta.annotation-api>2.1.1</jakarta.annotation-api>
         <spring-context>6.0.11</spring-context>
         <lombook>1.18.28</lombook>
         <juint>4.13.2</juint>
@@ -59,6 +61,12 @@
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
                 <version>${lombook}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>jakarta.annotation</groupId>
+                <artifactId>jakarta.annotation-api</artifactId>
+                <version>${jakarta.annotation-api}</version>
             </dependency>
 
             <dependency>
