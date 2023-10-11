@@ -12,6 +12,10 @@ public class UserServiceImpl implements UserService {
 
     private UserMapper userMapper;
 
+    public void setUserMapper(UserMapper userMapper) {
+        this.userMapper = userMapper;
+    }
+
     @Override
     public void save() {
         userMapper.insert();
