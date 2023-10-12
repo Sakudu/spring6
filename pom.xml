@@ -22,6 +22,7 @@
         <module>spring6-008-reflect</module>
         <module>spring6-009-mySpring</module>
         <module>spring6-010-annotation</module>
+        <module>spring6-011-proxy</module>
     </modules>
 
     <properties>
@@ -35,6 +36,7 @@
         <dom4j>2.1.3</dom4j>
         <hutool>5.4.0</hutool>
         <jaxen>2.0.0</jaxen>
+        <cglib>3.3.0</cglib>
     </properties>
 
     <dependencyManagement>
@@ -73,6 +75,12 @@
                 <groupId>jaxen</groupId>
                 <artifactId>jaxen</artifactId>
                 <version>${jaxen}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>cglib</groupId>
+                <artifactId>cglib</artifactId>
+                <version>${cglib}</version>
             </dependency>
 
             <dependency>
