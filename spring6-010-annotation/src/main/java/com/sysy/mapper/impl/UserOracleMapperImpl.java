@@ -5,13 +5,13 @@ import org.springframework.stereotype.Repository;
 
 /**
  * @author saku
- * @date 2023/10/11 16:03
+ * @date 2023/10/12 8:49
  */
-@Repository("mysql")
-public class UserMapperImpl implements UserMapper {
+@Repository("oracle")
+public class UserOracleMapperImpl implements UserMapper {
 
     @Override
     public void insert() {
-        System.out.println("向mysql数据库插入User数据");
+        System.out.println("向Oracle数据库插入User数据");
     }
 }
