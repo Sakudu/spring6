@@ -31,6 +31,7 @@
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <jakarta.annotation-api>2.1.1</jakarta.annotation-api>
+        <spring-aspects-version>6.0.11</spring-aspects-version>
         <spring-context>6.0.11</spring-context>
         <lombook>1.18.28</lombook>
         <juint>4.13.2</juint>
@@ -76,6 +77,12 @@
                 <groupId>jaxen</groupId>
                 <artifactId>jaxen</artifactId>
                 <version>${jaxen}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-aspects</artifactId>
+                <version>${spring-aspects-version}</version>
             </dependency>
 
             <dependency>
